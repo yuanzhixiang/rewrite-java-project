@@ -21,11 +21,8 @@ val jmhVersion = "1.36"
 val jcstressVersion = "0.15"
 
 dependencies {
-//    implementation("org.apache.groovy:groovy:4.0.2")
-//    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-//    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-
-//    testImplementation files ('build/classes/java/generated')
+    implementation("io.aeron:aeron-driver:1.40.0")
+    implementation("cn.hutool:hutool-core:5.8.10")
     testImplementation("org.hamcrest:hamcrest:${hamcrestVersion}")
     testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
     testImplementation("org.mockito:mockito-core:${mockitoVersion}")
