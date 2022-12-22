@@ -153,7 +153,6 @@ class AgentRunnerTest {
         Thread.sleep(100);
 
         final AtomicInteger closeTimeoutCalls = new AtomicInteger();
-        runner.close();
         runner.close(
                 1,
                 (t) ->
