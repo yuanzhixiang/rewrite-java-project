@@ -1,6 +1,20 @@
 //package io.aeron.driver;
 //
-//import org.agrona.collections.Int2ObjectHashMap;
+//import io.aeron.ChannelUri;
+//import io.aeron.driver.media.ControlTransportPoller;
+//import io.aeron.driver.media.SendChannelEndpoint;
+//import io.aeron.driver.status.DutyCycleStallTracker;
+//import org.agrona.collections.ArrayUtil;
+//import org.agrona.concurrent.Agent;
+//import org.agrona.concurrent.CachedNanoClock;
+//import org.agrona.concurrent.NanoClock;
+//import org.agrona.concurrent.OneToOneConcurrentArrayQueue;
+//import org.agrona.concurrent.status.AtomicCounter;
+//
+//import java.net.InetSocketAddress;
+//
+//import static io.aeron.driver.status.SystemCounterDescriptor.BYTES_SENT;
+//import static io.aeron.driver.status.SystemCounterDescriptor.RESOLUTION_CHANGES;
 //
 //class SenderLhsPadding {
 //    byte p000, p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012, p013, p014, p015;
@@ -29,6 +43,23 @@
 // */
 //public final class Sender extends SenderRhsPadding implements Agent {
 //
-//    public static void main(String[] args) {
+//    @Override
+//    public void onStart() {
+//        throw new UnsupportedOperationException();
+//    }
+//
+//    @Override
+//    public int doWork() throws Exception {
+//        throw new UnsupportedOperationException();
+//    }
+//
+//    @Override
+//    public void onClose() {
+//        throw new UnsupportedOperationException();
+//    }
+//
+//    @Override
+//    public String roleName() {
+//        throw new UnsupportedOperationException();
 //    }
 //}

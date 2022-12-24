@@ -1,11 +1,11 @@
-package io.aeron.driver;
+package io.aeron;
 
 import org.junit.jupiter.api.Test;
 
 /**
  * @author Yuan Zhixiang
  */
-public class SenderTest {
+public class AeronCountersTest {
 
     @Test
     public void test() {
