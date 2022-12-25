@@ -43,6 +43,35 @@
 // */
 //public final class Sender extends SenderRhsPadding implements Agent {
 //
+//    private NetworkPublication[] networkPublications = new NetworkPublication[0];
+//
+//    private final long statusMessageReadTimeoutNs;
+//    private final long reResolutionCheckIntervalNs;
+//    private final int dutyCycleRatio;
+//    private final ControlTransportPoller controlTransportPoller;
+//    private final OneToOneConcurrentArrayQueue<Runnable> commandQueue;
+//    private final AtomicCounter totalBytesSent;
+//    private final AtomicCounter resolutionChanges;
+//    private final NanoClock nanoClock;
+//    private final CachedNanoClock cachedNanoClock;
+//    private final DriverConductorProxy conductorProxy;
+//    private final DutyCycleTracker dutyCycleTracker;
+//
+//    Sender(final MediaDriver.Context ctx) {
+//        this.controlTransportPoller = ctx.controlTransportPoller();
+//        this.commandQueue = ctx.senderCommandQueue();
+//        this.totalBytesSent = ctx.systemCounters().get(BYTES_SENT);
+//        this.resolutionChanges = ctx.systemCounters().get(RESOLUTION_CHANGES);
+//        this.nanoClock = ctx.nanoClock();
+//        this.cachedNanoClock = ctx.senderCachedNanoClock();
+//        this.statusMessageReadTimeoutNs = ctx.statusMessageTimeoutNs() >> 1;
+//        this.reResolutionCheckIntervalNs = ctx.reResolutionCheckIntervalNs();
+//        this.dutyCycleRatio = ctx.sendToStatusMessagePollRatio();
+//        this.conductorProxy = ctx.driverConductorProxy();
+//
+//        this.dutyCycleTracker = ctx.senderDutyCycleTracker();
+//    }
+//
 //    @Override
 //    public void onStart() {
 //        throw new UnsupportedOperationException();

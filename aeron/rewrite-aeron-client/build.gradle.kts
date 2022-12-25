@@ -9,10 +9,15 @@ repositories {
     mavenCentral()
 }
 
+val mockitoVersion = "4.9.0"
+val junitVersion = "5.9.1"
+
 dependencies {
-    implementation("org.apache.groovy:groovy:4.0.2")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    implementation(project(":agrona:rewrite-agrona"))
+    testImplementation("org.mockito:mockito-core:${mockitoVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
 tasks.getByName<Test>("test") {
