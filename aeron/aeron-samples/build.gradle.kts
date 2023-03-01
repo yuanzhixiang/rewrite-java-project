@@ -22,7 +22,7 @@ val jcstressVersion = "0.15"
 
 dependencies {
     implementation("io.aeron:aeron-driver:1.40.0")
-    implementation("cn.hutool:hutool-core:5.8.10")
+    implementation("cn.hutool:hutool-core:5.8.11")
     testImplementation("org.hamcrest:hamcrest:${hamcrestVersion}")
     testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
     testImplementation("org.mockito:mockito-core:${mockitoVersion}")
